@@ -1,10 +1,15 @@
-.clock {
+.app {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .clock {
     width: 200px;
     height: 200px;
     position: relative;
     border: 5px solid black;
     border-radius: 50%;
-    margin: 50px auto;
+    margin: 20px auto;
     background-color: white;
   }
   
@@ -14,53 +19,24 @@
     height: 100%;
   }
   
-  .number {
+  .hour-hand, .minute-hand {
     position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-    transform: translate(-50%, -50%);
-  }
-  
-  .twelve {
-    top: 10px;
-    left: 50%;
-  }
-  
-  .three {
-    right: 10px;
     top: 50%;
-  }
-  
-  .six {
-    bottom: 10px;
     left: 50%;
-  }
-  
-  .nine {
-    left: 10px;
-    top: 50%;
+    transform-origin: bottom center;
+    background-color: black;
   }
   
   .hour-hand {
     width: 4px;
     height: 50px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%) rotate(-60deg); /* 8 Uhr Position (30° * (8 - 3)) */
-    transform-origin: bottom;
+    transform: translate(-50%, -100%);
   }
   
   .minute-hand {
     width: 2px;
     height: 70px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%) rotate(0deg); /* 0 Minuten */
-    transform-origin: bottom;
+    transform: translate(-50%, -100%);
   }
   
   .center-point {
@@ -72,5 +48,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+  }
+  
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .options button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .stats {
+    margin-bottom: 20px;
+  }
+  
+  .stats p {
+    font-size: 18px;
+    margin: 5px 0;
   }
   
